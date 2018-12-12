@@ -23,11 +23,11 @@ function setup() {
 function draw() {
   if(gameOver) {
     background(255,0,0);
-    fill(0,0,0);
     return;
   }
 
 	background(30, 115, 190);
+  fill(0,0,0);
   text("score: " + score, 10, 10);
 
   score = score + 1;
