@@ -70,7 +70,10 @@ function draw() {
     fill(255, 255, 255)
     ellipse(mouseX, mouseY, 15)
 
-    fill(badGuys[i].r || 0, badGuys[i].g || 0, badGuys[i].b || 0)
+    fill(0,0,0)
+    if(badGuys[i].r) {
+    	fill(badGuys[i].r, badGuys[i].g, badGuys[i].b)
+    }
     ellipse(badGuyX, badGuyY, badGuys[i].size || 15)
 
     badGuys[i].x = badGuyX
