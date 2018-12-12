@@ -1,36 +1,36 @@
-var badGuyX;
-var badGuyY;
-var badGuySpeed;
+var badGuyX
+var badGuyY
+var badGuySpeed
 function setup() {
-	createCanvas(windowWidth, windowHeight);
-	badGuyX = windowWidth;
-	badGuyY = windowHeight / 2;
-  badGuySpeed = 5;
+	createCanvas(windowWidth, windowHeight)
+	badGuyX = windowWidth
+	badGuyY = windowHeight / 2
+  badGuySpeed = 5
 }
 
 function draw() {
-	background(30, 115, 190);
+	background(30, 115, 190)
 
 	if ( abs(badGuyX - mouseX) < 10 && abs(badGuyY - mouseY) < 10) {
-		background(255, 0, 0);
+		background(255, 0, 0)
 	}
 
 	if(badGuyY > mouseY) {
-		badGuyY = badGuyY - badGuySpeed;
+		badGuyY = badGuyY - badGuySpeed
 	} else {
-		badGuyY = badGuyY + badGuySpeed;
+		badGuyY = badGuyY + badGuySpeed
 	}
 
 	if(badGuyX > mouseX) {
-		badGuyX = badGuyX - badGuySpeed;
+		badGuyX = badGuyX - badGuySpeed
 	} else {
-		badGuyX = badGuyX + badGuySpeed;
+		badGuyX = badGuyX + badGuySpeed
 	}
 
-	fill(255, 255, 255);
-	ellipse(mouseX, mouseY, 15);
+	fill(255, 255, 255)
+	ellipse(mouseX, mouseY, 15)
 
-	fill(0, 0, 0);
-	ellipse(badGuyX, badGuyY, 15);
+	fill(0, 0, 0)
+	ellipse(badGuyX, badGuyY, 15)
 
 }
